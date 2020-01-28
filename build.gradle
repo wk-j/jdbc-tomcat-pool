@@ -1,4 +1,5 @@
 plugins {
+    id 'application'
 	id 'org.springframework.boot' version '2.2.2.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
@@ -12,7 +13,13 @@ repositories {
 	mavenCentral()
 }
 
+// application {
+//     mainClassName = project.hasProperty("mainClass") ? getProperty("mainClass") : "NULL"
+// }
+
 dependencies {
+    implementation group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '7.4.1.jre8'
+
 	implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
