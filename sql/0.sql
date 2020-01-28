@@ -4,6 +4,6 @@ EXEC sp_configure 'show advanced options',
 RECONFIGURE;
 
 EXEC sp_configure 'user connections',
-                  10;
+                  0;
 
 RECONFIGURE;

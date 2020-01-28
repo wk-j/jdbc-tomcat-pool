@@ -26,7 +26,12 @@ gradle -PmainClass=com.example.wk.A run --warning-mode all
 
 ```bash
 sqlcmd -S localhost -U sa -P abcABC123 -Q "CREATE DATABASE jwdb"
+sqlcmd -S localhost -U sa -P abcABC123 -Q "SELECT @@MAX_CONNECTIONS as 'max connection'"
+sqlcmd -S localhost -U sa -P abcABC123 -Q "EXEC sp_configure"
+
 sqlcmd -S localhost -U sa -P abcABC123 -d master -i sql/5.sql
+sqlcmd -S localhost -U sa -P abcABC123 -d master -i sql/0.sql
+
 sqlcmd -S localhost -U sa -P abcABC123 -d master -i sql/max.sql
 sqlcmd -S localhost -U sa -P abcABC123 -d master -i sql/count.sql
 sqlcmd -S localhost -U sa -P abcABC123 -d master -i sql/config.sql
