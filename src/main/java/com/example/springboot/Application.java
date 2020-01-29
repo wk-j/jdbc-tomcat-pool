@@ -25,7 +25,7 @@ public class Application {
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         return args -> {
 
-            System.out.println("DataSource = " + dataSource);
+            // System.out.println("DataSource = " + dataSource);
 
             // System.out.println("Let's inspect the beans provided by Spring Boot:");
 
