@@ -22,6 +22,7 @@ public class HelloController {
 
     @RequestMapping("/q")
     public String q() throws SQLException {
+        System.out.print("new request /q");
         db.q();
         return "Hello";
     }
