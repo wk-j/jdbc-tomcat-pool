@@ -20,7 +20,7 @@ open http://localhost:4040
 ```bash
 wrk -t2 -d1m http://localhost:9090/q
 wrk -t2 -d10s -c400 http://localhost:9090/q
-wrk -t2 -d10m -c5 http://localhost:9090/q
+wrk -t200 -d10m -c2000 http://localhost:9090/q
 
 
 curl localhost:9090/q
