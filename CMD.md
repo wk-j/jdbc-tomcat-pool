@@ -7,6 +7,7 @@ sqlcmd -S localhost -U sa -P abcABC123 -Q "EXEC sp_configure"
 
 sqlcmd -S localhost -U sa -P abcABC123 -d master -i sql/5.sql
 sqlcmd -S localhost -U sa -P abcABC123 -d master -i sql/0.sql
+sqlcmd -S localhost -U sa -P abcABC123 -d master -i sql/2000.sql
 
 sqlcmd -S localhost -U sa -P abcABC123 -d master -i sql/max.sql
 sqlcmd -S localhost -U sa -P abcABC123 -d master -i sql/count.sql

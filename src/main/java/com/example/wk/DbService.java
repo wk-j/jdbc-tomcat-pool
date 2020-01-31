@@ -19,16 +19,15 @@ public class DbService implements IDbService {
     public void q() throws SQLException {
         long startTime = System.currentTimeMillis();
 
-        Connection c = source.getConnection();
-        Statement stmt = c.createStatement();
-        String SQL = "SELECT TOP 10 * FROM dbo.spt_monitor";
-        ResultSet rs = stmt.executeQuery(SQL);
-        while (rs.next()) {
-            System.out.print(rs.getString("cpu_busy"));
+        try (Connection c = source.getConnection(); Statement stmt = c.createStatement()) {
+            String SQL = "SELECT TOP 10 * FROM dbo.spt_monitor";
+            ResultSet rs = stmt.executeQuery(SQL);
+            while (rs.next()) {
+                System.out.print(rs.getString("cpu_busy"));
+            }
+            long endTime = System.currentTimeMillis();
+            System.out.println(" That took " + (endTime - startTime) + " milliseconds");
         }
-
-        long endTime = System.currentTimeMillis();
-        System.out.println(" That took " + (endTime - startTime) + " milliseconds");
     }
 
     public void query() {
