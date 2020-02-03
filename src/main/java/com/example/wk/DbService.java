@@ -29,4 +29,8 @@ public class DbService implements IDbService {
             System.out.println(" That took " + (endTime - startTime) + " milliseconds");
         }
     }
+
+    public DataSource getDataSource() throws SQLException {
+        return source;
+    }
 }
