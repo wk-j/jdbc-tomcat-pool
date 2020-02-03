@@ -1,4 +1,4 @@
-## Connection Pool
+## Run
 
 ```bash
 export JAVA_OPTS="-javaagent:glowroot/glowroot/glowroot.jar"
@@ -6,12 +6,22 @@ gradle bootRun
 gradle test
 ```
 
-## Build
+## Create Jar
 
 ```bash
 gradle clean
 gradle bootJar
+```
+
+### Run Jar
+
+```bash
 java -javaagent:glowroot/glowroot/glowroot.jar -jar build/libs/jdbc-tomcat-pool-0.0.1-SNAPSHOT.jar
+```
+
+## Endpoint
+
+```bash
 open http://localhost:9090
 open http://localhost:4040
 ```

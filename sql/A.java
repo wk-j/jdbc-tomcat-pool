@@ -23,3 +23,4 @@ public void query() {
     long endTime = System.currentTimeMillis();
     System.out.println(" That took " + (endTime - startTime) + " milliseconds");
 }
+}
