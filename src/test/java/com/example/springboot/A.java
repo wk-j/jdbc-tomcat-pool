@@ -15,6 +15,7 @@ public class A {
 
     @Test
     public void givenTomcatConnectionPoolInstance_whenCheckedPoolClassName_thenCorrect() {
-        assertThat(dataSource.getClass().getName()).isEqualTo("com.zaxxer.hikari.HikariDataSource");
+        String name = dataSource.getClass().getName();
+        assertThat(name).isEqualTo("org.apache.tomcat.jdbc.pool.DataSource");
     }
 }
