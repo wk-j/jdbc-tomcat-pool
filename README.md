@@ -2,6 +2,8 @@
 
 ```bash
 export JAVA_OPTS="-javaagent:glowroot/glowroot/glowroot.jar"
+
+gradle compileJava
 gradle bootRun
 gradle test
 ```
@@ -35,7 +37,8 @@ wrk -t200 -d10m -c2000 http://localhost:9090/q
 
 curl localhost:9090/q
 curl localhost:9090/m
-curl localhost:9090/p
+curl localhost:9090/n
+curl http://localhost:9090/p
 ```
 
 ## Resource
@@ -45,3 +48,4 @@ curl localhost:9090/p
 - https://www.matrix42.com/blog/2016/09/23/how-free-is-microsoft-sql-server-developer-edition-really
 - https://sqlperformance.com/2019/07/sql-performance/unintended-side-effects-sleeping-sessions-holding-locks
 - https://github.com/brettwooldridge/HikariCP#configuration-knobs-baby
+- http://www.masterspringboot.com/configuration/web-server/configuring-tomcat-connection-pool-on-spring-boot
