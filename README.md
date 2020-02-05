@@ -19,6 +19,7 @@ gradle bootJar
 
 ```bash
 java -javaagent:glowroot/glowroot/glowroot.jar -jar build/libs/jdbc-tomcat-pool-0.0.1-SNAPSHOT.jar
+java -jar build/libs/jdbc-tomcat-pool-0.0.1-SNAPSHOT.jar
 ```
 
 ## Endpoint
