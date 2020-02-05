@@ -81,11 +81,7 @@ public class HelloController {
             Set<ObjectName> objectNames = server.queryNames(null, null);
             for (ObjectName name : objectNames) {
                 MBeanInfo info = server.getMBeanInfo(name);
-                // org.apache.tomcat.jdbc.pool.DataSource
-                // if
-                // (info.getClassName().equals("org.apache.tomcat.jdbc.pool.jmx.ConnectionPool"))
-                // {
-                if (info.getClassName().equals(" org.apache.tomcat.jdbc.pool.DataSource")) {
+                if (info.getClassName().equals("org.apache.tomcat.jdbc.pool.jmx.ConnectionPool")) {
                     for (MBeanAttributeInfo mf : info.getAttributes()) {
                         Object attributeValue = server.getAttribute(name, mf.getName());
                         if (attributeValue != null) {
